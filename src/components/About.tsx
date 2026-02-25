@@ -119,7 +119,7 @@ const About = () => {
           </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Meet Kunamix
+              Meet Kunamix Digital Solutions
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-foreground/85 mb-6 font-medium">

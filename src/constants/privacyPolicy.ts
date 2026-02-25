@@ -15,7 +15,7 @@ export const sections = [
     icon: FileText,
     title: "1. Introduction",
     content: [
-      "Kunamix ('we', 'our', or 'us') is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.",
+      "Kunamix Digital Solutions ('we', 'our', or 'us') is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.",
       "We respect your privacy and are committed to protecting your personal data. This policy will inform you about how we handle your personal data, your privacy rights, and how the law protects you.",
       "By using our services, you consent to the collection and use of information in accordance with this Privacy Policy.",
     ],

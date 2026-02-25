@@ -62,7 +62,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            We're <strong className="text-foreground">Kunamix</strong> — a
+            We're <strong className="text-foreground">Kunamix Digital Solutions</strong> — a
             passionate team of three developers and designers creating
             beautiful, functional digital solutions that make a difference.
           </motion.p>

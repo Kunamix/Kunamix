@@ -1,4 +1,4 @@
-# 🚀 Kunamix — Tech Solutions That Scale
+# 🚀 Kunamix Digital Solutions
 
 > **Building tomorrow's digital experiences, today.**
 
@@ -9,7 +9,7 @@
 
 ## 🏢 About Us
 
-**Kunamix** is a tech services company built by developers and designers who are passionate about turning ideas into powerful digital products. From concept to deployment, we craft high-quality software solutions tailored to your needs — whether you're a startup, a growing business, or an enterprise.
+**Kunamix Digital Solutions** is a tech services company built by developers and designers who are passionate about turning ideas into powerful digital products. From concept to deployment, we craft high-quality software solutions tailored to your needs — whether you're a startup, a growing business, or an enterprise.
 
 We specialize in building **custom, scalable, and intuitive** software that solves real problems.
 

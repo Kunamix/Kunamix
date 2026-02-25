@@ -78,7 +78,7 @@ const TermsAndConditions = () => {
                     <h3 className="text-xl font-bold mb-3">Important Notice</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       These Terms and Conditions constitute a legally binding
-                      agreement between you and Kunamix regarding your use of
+                      agreement between you and Kunamix Digital Solutions regarding your use of
                       our services. By engaging our services, you acknowledge
                       that you have read, understood, and agree to be bound by
                       these terms. If you are entering into this agreement on
@@ -147,7 +147,7 @@ const TermsAndConditions = () => {
                     Acceptance of Terms
                   </h3>
                   <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                    By using Kunamix's services, you acknowledge that you have
+                    By using Kunamix Digital Solutions services, you acknowledge that you have
                     read and understood these Terms and Conditions and agree to
                     be bound by them. If you do not agree to these terms, please
                     do not use our services.
@@ -168,7 +168,7 @@ const TermsAndConditions = () => {
               For questions or concerns about these Terms and Conditions, please
               contact our legal team.
             </p>
-            <p>© {new Date().getFullYear()} Kunamix. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Kunamix Digital Solutions. All rights reserved.</p>
           </motion.div>
         </div>
       </div>

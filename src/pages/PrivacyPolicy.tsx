@@ -260,7 +260,7 @@ const PrivacyPolicy = () => {
               We are committed to transparency and will update this policy as
               needed to reflect changes in our practices.
             </p>
-            <p>© {new Date().getFullYear()} Kunamix. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Kunamix Digital Solutions. All rights reserved.</p>
           </motion.div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import whatsappImage from "@/assets/icons/whatsapp.webp"
 
 const WhatsAppButton = () => {
   const phoneNumber = "8788523391"; 
-  const message = encodeURIComponent("Hello! I have a question about Kunamix.");
+  const message = encodeURIComponent("Hello! I have a question about Kunamix Digital Solutions.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (

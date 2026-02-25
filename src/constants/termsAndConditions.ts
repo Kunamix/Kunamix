@@ -15,7 +15,7 @@ export const sections = [
       icon: Scale,
       title: "2. Services Description",
       content: [
-        "Kunamix provides professional digital services including website development, mobile application development, logo and branding design, UI/UX design, desktop applications, custom software solutions, e-commerce platforms, and SaaS development.",
+        "Kunamix Digital Solutions provides professional digital services including website development, mobile application development, logo and branding design, UI/UX design, desktop applications, custom software solutions, e-commerce platforms, and SaaS development.",
         "All services are provided 'as is' and we make no warranties regarding the uninterrupted availability of our services.",
         "Project timelines and deliverables will be outlined in individual project agreements or statements of work (SOW).",
         "We reserve the right to refuse service to anyone for any reason at any time.",
@@ -39,9 +39,9 @@ export const sections = [
       title: "4. Intellectual Property Rights",
       content: [
         "Upon full payment, clients receive ownership of the final deliverables as specified in the project agreement.",
-        "Kunamix retains the right to use project work in our portfolio, case studies, and marketing materials unless a non-disclosure agreement (NDA) states otherwise.",
-        "Any pre-existing intellectual property, templates, or frameworks used in the project remain the property of Kunamix or their respective owners.",
-        "Clients must not resell, redistribute, or claim ownership of any reusable components, frameworks, or tools developed by Kunamix.",
+        "Kunamix Digital Solutions retains the right to use project work in our portfolio, case studies, and marketing materials unless a non-disclosure agreement (NDA) states otherwise.",
+        "Any pre-existing intellectual property, templates, or frameworks used in the project remain the property of Kunamix Digital Solutions or their respective owners.",
+        "Clients must not resell, redistribute, or claim ownership of any reusable components, frameworks, or tools developed by Kunamix Digital Solutions.",
         "All source code and design files will be delivered upon final payment completion.",
       ],
       gradient: "from-orange-400 to-red-500",
@@ -84,7 +84,7 @@ export const sections = [
       icon: AlertCircle,
       title: "8. Limitation of Liability",
       content: [
-        "Kunamix will not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services.",
+        "Kunamix Digital Solutions will not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services.",
         "Our total liability for any claim arising from our services shall not exceed the amount paid by the client for the specific project.",
         "We are not responsible for losses due to third-party services, hosting issues, or factors beyond our reasonable control.",
         "Clients are responsible for maintaining backups of their websites and applications.",
@@ -97,7 +97,7 @@ export const sections = [
       content: [
         "Either party may terminate the agreement with written notice if the other party breaches any material term.",
         "Upon termination, clients must pay for all work completed up to the termination date.",
-        "Kunamix reserves the right to suspend or terminate services for non-payment or violation of these terms.",
+        "Kunamix Digital Solutions reserves the right to suspend or terminate services for non-payment or violation of these terms.",
         "Termination does not relieve clients of their payment obligations for work already performed.",
       ],
       gradient: "from-red-400 to-pink-500",
@@ -108,8 +108,8 @@ export const sections = [
       content: [
         "Referral commissions are paid only after the referred client's project payment is fully received.",
         "Commission rates: 20% for projects ₹1,00,000 and above; 15% for projects under ₹1,00,000.",
-        "Referrers must not misrepresent Kunamix's services or make unauthorized commitments on our behalf.",
-        "Kunamix reserves the right to modify or terminate the referral program at any time.",
+        "Referrers must not misrepresent Kunamix Digital Solutions services or make unauthorized commitments on our behalf.",
+        "Kunamix Digital Solutions reserves the right to modify or terminate the referral program at any time.",
         "Commissions are paid within 7 business days of receiving full payment from the referred client.",
         "Self-referrals or fraudulent referrals will result in immediate disqualification and potential legal action.",
       ],
@@ -130,9 +130,8 @@ export const sections = [
       title: "12. Contact Information",
       content: [
         "For any questions regarding these Terms and Conditions, please contact us at:",
-        "Email: legal@kunamix.com",
-        "Phone: +91 [Your Contact Number]",
-        "Address: [Your Business Address]",
+        "Email: contact@kunamix.com",
+        "Phone: +91 8788523391",
       ],
       gradient: "from-blue-400 to-indigo-500",
     },
