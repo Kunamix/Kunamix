@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 import carouselDecor2 from "@/assets/carousel/carousel-decor-2.webp";
 import carouselDecor1 from "@/assets/carousel/carousel-decor-1.webp";
@@ -41,7 +42,7 @@ const slides: Slide[] = [
       "Perfect for startups & small businesses",
     ],
     ctaText: "Get Started",
-    ctaLink: "#contact",
+    ctaLink: "/contact",
     image: carouselDecor1,
   },
   {
@@ -56,7 +57,7 @@ const slides: Slide[] = [
       "Multiple revisions available",
     ],
     ctaText: "View Portfolio",
-    ctaLink: "#portfolio",
+    ctaLink: "/portfolio",
     image: carouselDecor2,
   },
   {
@@ -71,7 +72,7 @@ const slides: Slide[] = [
       "Maintenance & Support",
     ],
     ctaText: "Our Services",
-    ctaLink: "#services",
+    ctaLink: "/services",
     image: carouselDecor3,
   },
   {
@@ -82,7 +83,7 @@ const slides: Slide[] = [
     highlightedText: "Decent Prices",
     features: ["Transparent pricing", "Fast delivery", "Reliable support"],
     ctaText: "Contact Us",
-    ctaLink: "#contact",
+    ctaLink: "/contact",
     image: carouselDecor4,
   },
 ];
@@ -255,10 +256,10 @@ const HeroCarousel = () => {
                   asChild
                   className="w-full sm:w-auto"
                 >
-                  <a href={slides[currentSlide].ctaLink} className="group">
+                  <Link to={slides[currentSlide].ctaLink} className="group">
                     {slides[currentSlide].ctaText}
                     <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </Button>
                 <span className="text-xs sm:text-sm text-carousel-muted">
                   No hidden fees

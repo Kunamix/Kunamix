@@ -41,23 +41,17 @@ const Footer = () => {
     }
   };
 
-  const scrollToSection = (href: string) => {
-    if (href === "/terms-conditions" || href === "/privacy-policy") {
-      navigate(href);
-      return;
-    }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavigation = (href: string) => {
+    navigate(href);
   };
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
     { name: "Privacy & Policy", href: "/privacy-policy" },
     { name: "Terms & Conditions", href: "/terms-conditions" },
   ];
@@ -143,7 +137,7 @@ const Footer = () => {
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <button
-                      onClick={() => scrollToSection(link.href)}
+                      onClick={() => handleNavigation(link.href)}
                       className="text-muted-foreground hover:text-primary transition-colors text-sm cursor-pointer"
                     >
                       {link.name}

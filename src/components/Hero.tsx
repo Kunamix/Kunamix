@@ -1,14 +1,10 @@
 import { motion } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section
@@ -62,8 +58,11 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            We're <strong className="text-foreground">Kunamix Digital Solutions</strong> — a
-            passionate team of three developers and designers creating
+            We're{" "}
+            <strong className="text-foreground">
+              Kunamix Digital Solutions
+            </strong>{" "}
+            — a passionate team of three developers and designers creating
             beautiful, functional digital solutions that make a difference.
           </motion.p>
 
@@ -75,7 +74,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
-              onClick={() => scrollToSection("#portfolio")}
+              onClick={() => navigate("/portfolio")}
               size="lg"
               className="
                 bg-gradient-primary 
@@ -93,7 +92,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => navigate("/contact")}
               size="lg"
               variant="outline"
               className="

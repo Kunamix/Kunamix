@@ -11,9 +11,11 @@ import {
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import servicesData from "@/constants/services.json";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const { servicesIntro, services } = servicesData;
+  const navigate = useNavigate();
 
   const getServiceIcon = (iconName: string) => {
     const iconMap = {
@@ -83,29 +85,11 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-background">
+    <section
+      id="services"
+      className="pt-8 pb-20 lg:pt-12 lg:pb-32 bg-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {servicesIntro.title}
-            </span>
-          </h2>
-          <p className="text-xl text-foreground/80 mb-4">
-            {servicesIntro.subtitle}
-          </p>
-          <p className="text-lg text-foreground/70">
-            {servicesIntro.description}
-          </p>
-        </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -179,10 +163,7 @@ const Services = () => {
                       cursor-pointer
                     "
                     onClick={() => {
-                      const element = document.querySelector("#contact");
-                      if (element) {
-                        element.scrollIntoView({ behavior: "smooth" });
-                      }
+                      navigate("/contact");
                     }}
                   >
                     {getServiceCTA(service.title)}
@@ -211,10 +192,7 @@ const Services = () => {
             <Button
               size="lg"
               onClick={() => {
-                const element = document.querySelector("#contact");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                }
+                navigate("/contact");
               }}
               className="
                 bg-gradient-primary 

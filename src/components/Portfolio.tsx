@@ -3,9 +3,11 @@ import { ExternalLink, Lock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { portfolioData } from "@/constants/portfolio";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
   const { portfolioIntro, projects } = portfolioData;
+  const navigate = useNavigate();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,7 +35,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-24 lg:py-40 bg-gradient-to-b from-muted/20 via-background to-muted/20 relative overflow-hidden"
+      className="pt-8 pb-24 lg:pt-12 lg:pb-40 bg-gradient-to-b from-muted/20 via-background to-muted/20 relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -42,40 +44,6 @@ const Portfolio = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-20"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-6"
-          >
-            <div className="px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
-              <p className="text-sm font-semibold bg-gradient-primary bg-clip-text text-transparent">
-                ✨ Featured Work
-              </p>
-            </div>
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {portfolioIntro.title}
-            </span>
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed font-medium">
-            {portfolioIntro.subtitle}
-          </p>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {portfolioIntro.description}
-          </p>
-        </motion.div>
-
         {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
@@ -248,10 +216,7 @@ const Portfolio = () => {
               <Button
                 size="lg"
                 onClick={() => {
-                  const element = document.querySelector("#contact");
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                  }
+                  navigate("/contact");
                 }}
                 className="bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 font-semibold px-8 h-12 rounded-lg text-base cursor-pointer"
               >
@@ -262,10 +227,7 @@ const Portfolio = () => {
                 size="lg"
                 className="border border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300 font-semibold px-8 h-12 rounded-lg text-base backdrop-blur-sm bg-transparent cursor-pointer hover:text-primary"
                 onClick={() => {
-                  const element = document.querySelector("#contact");
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                  }
+                  navigate("/contact");
                 }}
               >
                 Contact Us

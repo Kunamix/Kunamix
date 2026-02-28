@@ -4,12 +4,13 @@ import { Menu, X, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import Logo from "/logo.webp";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,25 +21,31 @@ const Header = () => {
   }, []);
 
   const navigation = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavigation = (href: string) => {
     setIsMobileMenuOpen(false);
+    navigate(href);
+  };
+
+  // Check if a nav item is active
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname.startsWith(href);
   };
 
   const onReferClick = () => {
     navigate("/refer");
   };
-  
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -59,7 +66,7 @@ const Header = () => {
             className="flex-shrink-0"
           >
             <button
-              onClick={() => scrollToSection("#home")}
+              onClick={() => handleNavigation("/")}
               className="flex items-center space-x-3 hover:scale-105 transition-transform"
             >
               <img
@@ -79,11 +86,21 @@ const Header = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + index * 0.1 }}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors relative group cursor-pointer"
+                  onClick={() => handleNavigation(item.href)}
+                  className={`px-3 py-2 text-sm font-medium transition-colors relative group cursor-pointer ${
+                    isActive(item.href)
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                  <span
+                    className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-primary transition-transform origin-left ${
+                      isActive(item.href)
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  ></span>
                 </motion.button>
               ))}
             </div>
@@ -127,7 +144,7 @@ const Header = () => {
               transition={{ delay: 0.2 }}
             >
               <Button
-                onClick={() => scrollToSection("#contact")}
+                onClick={() => handleNavigation("/contact")}
                 className="
                   bg-gradient-primary 
                   text-primary-foreground
@@ -176,8 +193,12 @@ const Header = () => {
             {navigation.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary hover:bg-muted block px-3 py-2 text-base font-medium w-full text-left transition-colors"
+                onClick={() => handleNavigation(item.href)}
+                className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors ${
+                  isActive(item.href)
+                    ? "text-primary bg-primary/10"
+                    : "text-foreground hover:text-primary hover:bg-muted"
+                }`}
               >
                 {item.name}
               </button>
@@ -204,7 +225,7 @@ const Header = () => {
                 Refer & Earn
               </Button>
               <Button
-                onClick={() => scrollToSection("#contact")}
+                onClick={() => handleNavigation("/contact")}
                 className="
                   w-full 
                   bg-gradient-primary 

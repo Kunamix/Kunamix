@@ -2,25 +2,30 @@ import { motion } from "motion/react";
 import { Code2, Palette, Zap, Users, Award, Target } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   const teamStats = [
     {
       icon: <Users className="w-8 h-8" />,
       title: "Agile Development Team",
-      description: "Expert developers and designers delivering enterprise-grade solutions",
+      description:
+        "Expert developers and designers delivering enterprise-grade solutions",
       color: "from-blue-500 to-purple-600",
     },
     {
       icon: <Code2 className="w-8 h-8" />,
       title: "Full-Stack Expertise",
-      description: "Complete tech stack mastery from frontend to backend infrastructure",
+      description:
+        "Complete tech stack mastery from frontend to backend infrastructure",
       color: "from-purple-500 to-pink-600",
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: "Design Excellence",
-      description: "Award-worthy interfaces that drive engagement and conversions",
+      description:
+        "Award-worthy interfaces that drive engagement and conversions",
       color: "from-cyan-500 to-blue-600",
     },
   ];
@@ -87,7 +92,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 lg:py-40 bg-gradient-to-b from-muted/20 via-background to-muted/20 relative overflow-hidden"
+      className="pt-8 pb-24 lg:pt-12 lg:pb-40 bg-gradient-to-b from-muted/20 via-background to-muted/20 relative overflow-hidden"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -96,43 +101,6 @@ const About = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto mb-24"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-8"
-          >
-            <div className="px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
-              <p className="text-sm font-semibold bg-gradient-primary bg-clip-text text-transparent">
-                🚀 About Us
-              </p>
-            </div>
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Meet Kunamix Digital Solutions
-            </span>
-          </h2>
-          <p className="text-xl md:text-2xl text-foreground/85 mb-6 font-medium">
-            Elite development team specializing in cutting-edge web solutions
-          </p>
-          <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl mx-auto">
-            We are a specialized development studio combining technical excellence 
-            with strategic design thinking. Our lean, focused approach allows us to 
-            deliver high-impact solutions with the precision and quality that larger 
-            agencies struggle to match.
-          </p>
-        </motion.div>
-
         {/* Team Stats Cards */}
         <motion.div
           variants={containerVariants}
@@ -195,7 +163,8 @@ const About = () => {
               </span>
             </h3>
             <p className="text-foreground/60 mt-4 text-lg max-w-2xl mx-auto">
-              The principles that set us apart in delivering exceptional digital solutions
+              The principles that set us apart in delivering exceptional digital
+              solutions
             </p>
           </div>
 
@@ -302,9 +271,10 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-white/95 mb-10 text-lg max-w-3xl mx-auto leading-relaxed"
               >
-                Ready to transform your vision into a powerful digital solution? 
-                Schedule a consultation to discuss your project requirements and 
-                discover how we can deliver results that drive your business forward.
+                Ready to transform your vision into a powerful digital solution?
+                Schedule a consultation to discuss your project requirements and
+                discover how we can deliver results that drive your business
+                forward.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -316,10 +286,7 @@ const About = () => {
                   variant="secondary"
                   size="lg"
                   onClick={() => {
-                    const element = document.querySelector("#contact");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
+                    navigate("/contact");
                   }}
                   className="bg-white text-primary hover:bg-white/90 transition-all duration-300 font-bold shadow-2xl hover:shadow-xl hover:scale-110 px-10 h-14 text-base cursor-pointer"
                 >

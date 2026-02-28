@@ -75,29 +75,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-background">
+    <section
+      id="contact"
+      className="pt-8 pb-20 lg:pt-12 lg:pb-32 bg-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {contactInfo.title}
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground mb-4">
-            {contactInfo.subtitle}
-          </p>
-          <p className="text-lg text-muted-foreground">
-            {contactInfo.description}
-          </p>
-        </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div

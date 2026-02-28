@@ -1,13 +1,10 @@
 import { motion } from "motion/react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCorousel";
 import Testimonials from "@/components/Testimonial";
-import Portfolio from "@/components/Portfolio";
-import About from "@/components/About";
+import Blog from "@/components/Blog";
 
 const Index = () => {
   return (
@@ -21,11 +18,8 @@ const Index = () => {
       <main>
         <HeroCarousel />
         <Hero />
-        <About />
-        <Services />
-        <Portfolio />
+        <Blog />
         <Testimonials />
-        <Contact />
       </main>
       <Footer />
     </motion.div>
