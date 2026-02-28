@@ -14,7 +14,7 @@ import servicesData from "@/constants/services.json";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
-  const { servicesIntro, services } = servicesData;
+  const { services } = servicesData;
   const navigate = useNavigate();
 
   const getServiceIcon = (iconName: string) => {

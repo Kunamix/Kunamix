@@ -6,7 +6,7 @@ import { portfolioData } from "@/constants/portfolio";
 import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
-  const { portfolioIntro, projects } = portfolioData;
+  const { projects } = portfolioData;
   const navigate = useNavigate();
 
   const containerVariants = {
