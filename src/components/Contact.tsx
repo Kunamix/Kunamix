@@ -20,6 +20,14 @@ import discord from "../assets/icons/discord.webp";
 import { useContactForm } from "@/hooks/useContactFrom";
 import { toast } from "sonner";
 
+// ── GA4 helper ──────────────────────────────────────────────────────────────
+const trackEvent = (eventName: string, params?: Record<string, unknown>) => {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", eventName, params);
+  }
+};
+// ────────────────────────────────────────────────────────────────────────────
+
 const Contact = () => {
   const { sendContactForm, loading } = useContactForm();
   const { contactInfo, social } = contactData;
@@ -45,6 +53,13 @@ const Contact = () => {
     e.preventDefault();
     const res = await sendContactForm(formData);
     if (res.success) {
+      // ── TRACK SUCCESSFUL FORM SUBMISSION ──────────────────────────────────
+      trackEvent("form_submission", {
+        event_category: "Contact",
+        event_label: "Contact Form",
+        value: 1,
+      });
+      // ─────────────────────────────────────────────────────────────────────
       toast("Message sent successfully!");
       setFormData({
         name: "",
