@@ -296,6 +296,9 @@ const HeroCarousel = () => {
                     src={slides[currentSlide].image}
                     alt={slides[currentSlide].badge}
                     className="relative z-10 w-full h-auto rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl shadow-primary/20"
+                    width={450}
+                    height={450}
+                    fetchPriority="high"
                   />
 
                   {/* Decorative Ring - Hidden on small screens */}

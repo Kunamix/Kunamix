@@ -145,6 +145,9 @@ const BlogPage = () => {
                             src={blog.coverImage}
                             alt={blog.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            width={400}
+                            height={192}
+                            loading="lazy"
                           />
                         ) : (
                           <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">

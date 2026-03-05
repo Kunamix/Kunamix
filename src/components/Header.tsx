@@ -73,6 +73,8 @@ const Header = () => {
                 src={Logo}
                 alt="Kunamix Logo"
                 className="h-8 w-auto object-contain"
+                width={120}
+                height={32}
               />
             </button>
           </motion.div>

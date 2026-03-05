@@ -18,6 +18,9 @@ const Footer = () => {
         src={hover ? discordImg : discordBlue}
         alt="Discord"
         className="w-5 h-5"
+        width={20}
+        height={20}
+        loading="lazy"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       />
@@ -84,6 +87,9 @@ const Footer = () => {
                   src={Logo}
                   alt="Kunamix Logo"
                   className="w-auto h-14 object-contain"
+                  width={160}
+                  height={56}
+                  loading="lazy"
                 />
                 <br />
                 <p className="text-muted-foreground max-w-md leading-relaxed">

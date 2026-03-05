@@ -83,7 +83,16 @@ const Contact = () => {
       case "instagram":
         return <Instagram className="w-5 h-5" />;
       case "discord":
-        return <img src={discord} className="w-5 h-5" />;
+        return (
+          <img
+            src={discord}
+            className="w-5 h-5"
+            alt="Discord"
+            width={20}
+            height={20}
+            loading="lazy"
+          />
+        );
       default:
         return <Mail className="w-5 h-5" />;
     }

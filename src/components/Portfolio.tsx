@@ -72,6 +72,9 @@ const Portfolio = () => {
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-115"
+                    width={400}
+                    height={300}
+                    loading="lazy"
                   />
                   {project.featured && (
                     <motion.div

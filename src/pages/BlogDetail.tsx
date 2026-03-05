@@ -171,6 +171,9 @@ const BlogDetail = () => {
                 src={blog.coverImage}
                 alt={blog.title}
                 className="w-full h-auto max-h-[400px] object-cover"
+                width={800}
+                height={400}
+                fetchPriority="high"
               />
             </motion.div>
           )}
