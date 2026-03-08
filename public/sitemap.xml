@@ -86,6 +86,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://kunamix.com/blog/affordable-app-development-startups</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <url>
     <loc>https://kunamix.com/refer</loc>
