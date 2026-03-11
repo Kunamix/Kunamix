@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import Logo from "/logo.webp";
 import { useNavigate, useLocation } from "react-router-dom";
+import ProductsGrid from "./ProductGrid";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -110,6 +111,7 @@ const Header = () => {
 
           {/* Theme Toggle & CTA Buttons */}
           <div className="hidden md2:flex items-center gap-3">
+            <ProductsGrid/>
             <ThemeToggle />
 
             {/* Refer & Earn Button */}
@@ -165,6 +167,7 @@ const Header = () => {
 
           {/* Mobile menu button & theme toggle */}
           <div className="md2:hidden flex items-center gap-2">
+            <ProductsGrid />
             <ThemeToggle />
             <Button
               variant="ghost"
