@@ -34,10 +34,10 @@ const Hero = () => {
             className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 mt-20 lg:mt-16"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Creative Tech Team
+            Custom Software Development Company India
           </motion.div>
 
-          {/* Main Heading */}
+          {/* Main Heading — keyword-targeted */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,25 +45,22 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Digital Experiences
+              We Build Software
             </span>
             <br />
-            That Inspire
+            That Scales
           </motion.h1>
 
-          {/* Subtitle - Improved contrast */}
+          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            We're{" "}
-            <strong className="text-foreground">
-              Kunamix Digital Solutions
-            </strong>{" "}
-            — a passionate team of three developers and designers creating
-            beautiful, functional digital solutions that make a difference.
+            <strong className="text-foreground">Kunamix Digital Solutions</strong>{" "}
+            — MVPs, web apps, mobile apps, and SaaS products built for startups
+            and businesses globally. React · Node.js · Flutter · AWS.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -74,7 +71,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
-              onClick={() => navigate("/portfolio")}
+              onClick={() => navigate("/contact")}
               size="lg"
               className="
                 bg-gradient-primary 
@@ -88,47 +85,47 @@ const Hero = () => {
                 cursor-pointer
               "
             >
-              View Our Work
+              Book Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
-              onClick={() => navigate("/contact")}
+              onClick={() => navigate("/portfolio")}
               size="lg"
               variant="outline"
               className="
                 border-primary/30
-                  bg-transparent
-                  text-foreground
-                  hover:bg-primary/10
-                  hover:border-primary/50
-                  hover:text-primary
-                  transition-all 
-                  duration-300
-                  group 
-                  cursor-pointer
+                bg-transparent
+                text-foreground
+                hover:bg-primary/10
+                hover:border-primary/50
+                hover:text-primary
+                transition-all 
+                duration-300
+                group 
+                cursor-pointer
               "
             >
-              Start a Project
+              View Our Work
             </Button>
           </motion.div>
 
-          {/* Stats - Improved hierarchy */}
+          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border/50 mb-32 lg:mb-40"
           >
-            {/* Primary Stat - Projects */}
+            {/* Stat 1 */}
             <div className="text-center">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
                 50+
               </div>
               <div className="text-sm md:text-base text-foreground/70 font-medium">
-                Projects Completed
+                Projects Delivered
               </div>
             </div>
-            {/* Secondary Stat - Client Satisfaction (Clickable) */}
+            {/* Stat 2 */}
             <motion.a
               href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review"
               target="_blank"
@@ -172,13 +169,13 @@ const Hero = () => {
                 View Reviews →
               </div>
             </motion.a>
-            {/* Tertiary Stat - Quality Focus */}
+            {/* Stat 3 */}
             <div className="text-center">
               <div className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground/90 mb-2">
-                Expert
+                6–8 Weeks
               </div>
               <div className="text-sm md:text-base text-foreground/70 font-medium">
-                Quality Focus
+                MVP to Launch
               </div>
             </div>
           </motion.div>

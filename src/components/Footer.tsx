@@ -59,13 +59,16 @@ const Footer = () => {
     { name: "Terms & Conditions", href: "/terms-conditions" },
   ];
 
+  // Services aligned with SEO keywords
   const services = [
-    "Web Development",
-    "Mobile Apps",
-    "Desktop Apps",
+    "MVP Development",
+    "Web App Development",
+    "Mobile App Development",
+    "SaaS Product Development",
+    "Custom Software & ERP",
+    "White Label Development",
     "UI/UX Design",
-    "Branding",
-    "Consulting",
+    "Full Stack Development",
   ];
 
   return (
@@ -85,17 +88,19 @@ const Footer = () => {
               <div className="mb-6">
                 <img
                   src={Logo}
-                  alt="Kunamix Logo"
+                  alt="Kunamix Digital Solutions Logo"
                   className="w-auto h-14 object-contain"
                   width={160}
                   height={56}
                   loading="lazy"
                 />
                 <br />
+                {/* Updated: authority-positioning description with keyword signals */}
                 <p className="text-muted-foreground max-w-md leading-relaxed">
-                  We're a passionate team of three developers and designers
-                  creating beautiful, functional digital solutions that make a
-                  difference.
+                  Kunamix is a custom software development company in India,
+                  building scalable MVPs, web apps, mobile apps, and SaaS
+                  products for startups and businesses globally. React ·
+                  Next.js · Node.js · Flutter · AWS.
                 </p>
               </div>
 
@@ -107,7 +112,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <span className="w-4 h-4 mr-3 text-primary">📍</span>
-                  {contactInfo.address}
+                  India — Serving clients globally
                 </div>
               </div>
 
@@ -153,7 +158,7 @@ const Footer = () => {
               </ul>
             </motion.div>
 
-            {/* Services */}
+            {/* Services — keyword-aligned */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -174,6 +179,16 @@ const Footer = () => {
               </ul>
             </motion.div>
           </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-border/50 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Kunamix Digital Solutions. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Custom Software Development Company India
+          </p>
         </div>
       </div>
     </footer>
