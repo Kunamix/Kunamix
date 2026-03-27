@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { axiosInstance } from "@/lib/axios";
 
-interface ContactFormData {
-  company?: string;
+// Updated: replaced `subject` with `projectType` + optional `budget`
+export interface ContactFormData {
   name: string;
   email: string;
-  subject: string;
+  projectType: string;
+  budget?: string;
   message: string;
 }
 
@@ -21,7 +22,7 @@ interface ReferralFormData {
   estimatedBudget: string;
 }
 
-interface ApiResponse {
+export interface ApiResponse {
   success: boolean;
   message: string;
 }
@@ -31,19 +32,31 @@ export const useContactForm = () => {
   const [response, setResponse] = useState<ApiResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const sendContactForm = async (formData: ContactFormData) => {
+  const sendContactForm = async (
+    formData: ContactFormData,
+  ): Promise<ApiResponse> => {
     setLoading(true);
     setError(null);
     setResponse(null);
 
     try {
-      const res = await axiosInstance.post<ApiResponse>("/contact-form", formData);
+      const res = await axiosInstance.post<ApiResponse>(
+        "/contact-form",
+        formData,
+      );
       setResponse(res.data);
       return res.data;
-    } catch (err: any) {
-      const errorMessage = err.response?.data?.message || "Something went wrong";
-      setError(errorMessage);
-      throw new Error(errorMessage);
+    } catch (err: unknown) {
+      const message =
+        (
+          err as {
+            response?: { data?: { message?: string } };
+          }
+        )?.response?.data?.message ?? "Something went wrong. Please try again.";
+
+      setError(message);
+      // Return failure shape — callers use if/else, no try/catch needed
+      return { success: false, message };
     } finally {
       setLoading(false);
     }
@@ -57,19 +70,30 @@ export const useReferForm = () => {
   const [response, setResponse] = useState<ApiResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const sendReferForm = async (formData: ReferralFormData) => {
+  const sendReferForm = async (
+    formData: ReferralFormData,
+  ): Promise<ApiResponse> => {
     setLoading(true);
     setError(null);
     setResponse(null);
 
     try {
-      const res = await axiosInstance.post<ApiResponse>("/refer-form", formData);
+      const res = await axiosInstance.post<ApiResponse>(
+        "/refer-form",
+        formData,
+      );
       setResponse(res.data);
       return res.data;
-    } catch (err: any) {
-      const errorMessage = err.response?.data?.message || "Something went wrong";
-      setError(errorMessage);
-      throw new Error(errorMessage);
+    } catch (err: unknown) {
+      const message =
+        (
+          err as {
+            response?: { data?: { message?: string } };
+          }
+        )?.response?.data?.message ?? "Something went wrong. Please try again.";
+
+      setError(message);
+      return { success: false, message };
     } finally {
       setLoading(false);
     }

@@ -1,6 +1,5 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "./components/ThemeProvider";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -19,7 +18,6 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="kunamix-ui-theme">
       <TooltipProvider>
         <Toaster />
         <WhatsAppButton />
@@ -44,7 +42,6 @@ const App = () => {
           </Suspense>
         </BrowserRouter>
       </TooltipProvider>
-    </ThemeProvider>
   );
 };
 

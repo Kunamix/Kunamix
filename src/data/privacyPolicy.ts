@@ -1,0 +1,180 @@
+import {
+  AlertTriangle,
+  Cookie,
+  Database,
+  Eye,
+  FileText,
+  Globe,
+  Lock,
+  Share2,
+  UserCheck,
+  Shield,
+} from "lucide-react";
+
+export const PRIVACY_BREADCRUMB = [
+  { label: "Home", href: "/" },
+  { label: "Privacy Policy" },
+];
+
+export const PRIVACY_PRINCIPLES = [
+  {
+    icon: Lock,
+    title: "Security",
+    description:
+      "We protect your data with industry-standard encryption and security measures.",
+  },
+  {
+    icon: Eye,
+    title: "Transparency",
+    description:
+      "We are open about how we collect, use, and share your information.",
+  },
+  {
+    icon: UserCheck,
+    title: "Control",
+    description:
+      "You have control over your personal data and privacy preferences.",
+  },
+  {
+    icon: Shield,
+    title: "Compliance",
+    description:
+      "We comply with all applicable data protection laws and regulations.",
+  },
+];
+
+export const PRIVACY_SECTIONS = [
+  {
+    icon: FileText,
+    title: "1. Introduction",
+    content: [
+      "Kunamix Digital Solutions ('we', 'our', or 'us') is committed to protecting your privacy and ensuring the security of your personal information.",
+      "This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, your privacy rights, and how the law protects you.",
+      "By using our services, you consent to the collection and use of information in accordance with this Privacy Policy.",
+    ],
+  },
+  {
+    icon: Database,
+    title: "2. Information We Collect",
+    content: [
+      "Personal Information: Name, email address, phone number, company name, billing address, and payment information when you engage our services.",
+      "Project Information: Details about your project requirements, business objectives, and any content or materials you provide for project development.",
+      "Technical Data: IP address, browser type, device information, operating system, and usage data collected through cookies and similar technologies.",
+      "Communication Data: Records of correspondence, feedback, survey responses, and support inquiries.",
+      "Referral Information: If you participate in our referral program, we collect information about referred clients with your consent.",
+    ],
+  },
+  {
+    icon: Eye,
+    title: "3. How We Use Your Information",
+    content: [
+      "Service Delivery: To provide, maintain, and improve our digital services including web development, mobile apps, and design solutions.",
+      "Communication: To respond to inquiries, provide customer support, send project updates, and communicate about our services.",
+      "Payment Processing: To process transactions, send invoices, and manage billing.",
+      "Marketing: With your consent, to send promotional materials, newsletters, and information about new services. You can opt-out at any time.",
+      "Analytics: To analyze usage patterns, improve our services, and enhance user experience.",
+      "Legal Compliance: To comply with legal obligations and protect our rights and interests.",
+      "Referral Program: To manage and process referral rewards and commissions.",
+    ],
+  },
+  {
+    icon: Lock,
+    title: "4. Data Security",
+    content: [
+      "We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.",
+      "All sensitive data is encrypted using SSL/TLS protocols during transmission.",
+      "We use secure servers and databases with restricted access to authorized personnel only.",
+      "Regular security audits and updates are performed to maintain the highest security standards.",
+      "Despite our efforts, no method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.",
+      "In the event of a data breach, we will notify affected users in accordance with applicable laws.",
+    ],
+  },
+  {
+    icon: Share2,
+    title: "5. Information Sharing & Disclosure",
+    content: [
+      "Service Providers: We may share information with trusted third-party service providers who assist in operating our business (payment processors, hosting providers, email services).",
+      "Legal Requirements: We may disclose information if required by law, court order, or governmental request.",
+      "Business Transfers: In the event of a merger, acquisition, or sale of assets, your information may be transferred to the new entity.",
+      "With Your Consent: We may share information with third parties when you have given explicit consent.",
+      "We do not sell, rent, or trade your personal information to third parties for marketing purposes.",
+      "Portfolio & Marketing: With your permission, we may showcase your project in our portfolio and marketing materials.",
+    ],
+  },
+  {
+    icon: Cookie,
+    title: "6. Cookies & Tracking Technologies",
+    content: [
+      "We use cookies and similar tracking technologies to enhance your experience on our website.",
+      "Essential Cookies: Required for basic website functionality and security.",
+      "Analytics Cookies: Help us understand how visitors interact with our website (Google Analytics, etc.).",
+      "Marketing Cookies: Used to deliver relevant advertisements and track campaign effectiveness.",
+      "You can control cookie preferences through your browser settings. Note that disabling cookies may affect website functionality.",
+      "We use Google Analytics to analyze website traffic. You can opt-out using Google's opt-out tools.",
+    ],
+  },
+  {
+    icon: UserCheck,
+    title: "7. Your Privacy Rights",
+    content: [
+      "Access: You have the right to request access to the personal information we hold about you.",
+      "Correction: You can request correction of inaccurate or incomplete personal data.",
+      "Deletion: You may request deletion of your personal information, subject to legal obligations.",
+      "Data Portability: You can request a copy of your data in a structured, machine-readable format.",
+      "Opt-Out: You can opt-out of marketing communications at any time by clicking 'unsubscribe' in our emails.",
+      "Withdraw Consent: You may withdraw consent for data processing where we rely on consent as the legal basis.",
+      "To exercise these rights, please contact us at contact@kunamix.com.",
+    ],
+  },
+  {
+    icon: Globe,
+    title: "8. International Data Transfers",
+    content: [
+      "Your information may be transferred to and processed in countries other than your country of residence.",
+      "We ensure appropriate safeguards are in place to protect your data during international transfers.",
+      "By using our services, you consent to the transfer of your information to India and other countries where we operate.",
+      "We comply with applicable data protection laws regarding international data transfers.",
+    ],
+  },
+  {
+    icon: Database,
+    title: "9. Data Retention",
+    content: [
+      "We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy.",
+      "Project-related data is typically retained for the duration of the project and for 3-5 years thereafter for legal and accounting purposes.",
+      "Marketing data is retained until you opt-out or request deletion.",
+      "After the retention period, we securely delete or anonymize your personal information.",
+      "Some information may be retained for longer periods if required by law or for legitimate business purposes.",
+    ],
+  },
+  {
+    icon: AlertTriangle,
+    title: "10. Third-Party Links",
+    content: [
+      "Our website may contain links to third-party websites, services, or applications.",
+      "We are not responsible for the privacy practices of these third-party sites.",
+      "We encourage you to review the privacy policies of any third-party sites you visit.",
+      "This Privacy Policy applies only to information collected by Kunamix.",
+    ],
+  },
+  {
+    icon: UserCheck,
+    title: "11. Children's Privacy",
+    content: [
+      "Our services are not intended for children under the age of 18.",
+      "We do not knowingly collect personal information from children under 18.",
+      "If we become aware that we have collected data from a child under 18, we will take steps to delete such information.",
+      "If you believe we have collected information from a child, please contact us immediately.",
+    ],
+  },
+  {
+    icon: FileText,
+    title: "12. Changes to Privacy Policy",
+    content: [
+      "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements.",
+      "We will notify you of any material changes by posting the new Privacy Policy on our website and updating the 'Last Updated' date.",
+      "For significant changes, we may provide additional notice via email or prominent website notification.",
+      "Your continued use of our services after changes become effective constitutes acceptance of the updated Privacy Policy.",
+    ],
+  },
+];
