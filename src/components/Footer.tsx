@@ -120,12 +120,12 @@ const SOCIALS = [
   {
     label: "Twitter",
     icon: <TwitterIcon />,
-    href: "https://twitter.com/kunamix",
+    href: "https://x.com/kuna_mix",
   },
   {
     label: "Instagram",
     icon: <InstagramIcon />,
-    href: "https://instagram.com/kunamix",
+    href: "https://instagram.com/kuna.mix",
   },
 ];
 
